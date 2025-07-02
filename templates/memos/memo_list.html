@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2 class="mb-4">메모 목록</h2>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>제목</th>
+            <th>작성일</th>
+            <th>액션</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for memo in object_list %}
+        <tr>
+            <td>{{ memo.title }}</td>
+            <td>{{ memo.created_at }}</td>
+            <td>
+                <a class="btn btn-info btn-sm" href="{{ memo.get_absolute_url }}">보기</a>
+                <a class="btn btn-warning btn-sm" href="{{ memo.get_update_url }}">수정</a>
+                <a class="btn btn-danger btn-sm" href="{{ memo.get_delete_url }}">삭제</a>
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+<a class="btn btn-primary" href="{% url 'memos:memo_create' %}">새 메모 작성</a>
+{% endblock %}

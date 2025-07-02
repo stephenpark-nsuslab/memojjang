@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <div class="container mt-4">
+    <h2 class="mb-4">{{ object.title }}</h2>
+    <p>{{ object.content }}</p>
+    <hr>
+    <a class="btn btn-secondary" href="{% url 'memos:memo_list' %}">목록으로</a>
+    <a class="btn btn-warning" href="{{ object.get_update_url }}">수정</a>
+    <a class="btn btn-danger" href="{{ object.get_delete_url }}">삭제</a>
+  </div>
+{% endblock %}
