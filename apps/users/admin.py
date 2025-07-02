@@ -1,5 +1,4 @@
 from django.contrib import admin
-from django.contrib.auth.models import User
 
-# Register your models here.
-admin.site.register(User)
+# 중복 등록된 User 모델 제거
+# admin.site.register(User)
