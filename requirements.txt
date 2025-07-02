@@ -1,2 +1,17 @@
-Django>=4.0,<5.0
-python-decouple
+# Django Framework
+Django==4.2.23
+
+# Environment Configuration
+python-dotenv==1.1.1
+python-decouple==3.8
+
+# Production Server (optional)
+gunicorn==21.2.0
+whitenoise==6.6.0
+
+# Database (production alternatives)
+# psycopg2-binary==2.9.9  # For PostgreSQL
+# mysqlclient==2.2.4      # For MySQL
+
+# Monitoring and Logging (optional)
+# sentry-sdk==1.39.2      # For error tracking
